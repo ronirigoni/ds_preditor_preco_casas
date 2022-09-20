@@ -1,5 +1,7 @@
 ## Preditor de Preços de Casas de Palmas - TO
 
+Execute este preditor na Google Cloud: <https://ronirigoni.github.io/ds_preditor_preco_casas/>
+
 Este projeto tem por objetivo estimar o preço de venda de casas na cidade de Palmas - TO. Para estimar o valor venal de uma casa,
 o usuário deve fornecer os seguintes valores:
 - Área Total da Casa (metros quadrados)
