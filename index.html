@@ -8,88 +8,93 @@
   <body>
 	<div class="container">
 	
-		<h2 style="margin-bottom:20px">Preditor de Preço de Casas (Palmas-TO)</h2>
-	
-		<div class="col-sm-6 col-sm-offset-3">
 		
-			<p>Quanto custa uma determinada casa na cidade de Palmas-TO? Preencha os campos abaixo e clique
-			em PREVER PREÇO para descobrir.</p>
-			<p><small><i>
-			Este aplicativo utiliza um modelo de Machine Learning treinado com mais de 4.000 casas 
-			listadas à venda no site www.zapimoveis.com.br. Projeto: <a href="https://github.com/ronirigoni/ds_preditor_preco_casas" target="_blank">https://github.com/ronirigoni/ds_preditor_preco_casas</a></i>
-			</small></p>
-		  
-		  <form id="formulario" action="#" method="post">
-			<div id="area-group" class="form-group">
-			  <label for="area">Área Construída (m²):</label>
-			  <input
-				type="number"
-				class="form-control"
-				id="area"
-				name="area"
-				placeholder="Ex.: 200"
-				value=200
-			  />
-			</div>
-
-			<div id="quartos-group" class="form-group">
-			  <label for="quartos">Quantidade de Quartos:</label>
-			  <input
-				type="number"
-				class="form-control"
-				id="quartos"
-				name="quartos"
-				placeholder="Ex.: 3"
-				value=3
-			  />
-			</div>
-
-			<div id="banheiros-group" class="form-group">
-			  <label for="banheiros">Quantidade de Banheiros:</label>
-			  <input
-				type="number"
-				class="form-control"
-				id="banheiros"
-				name="banheiros"
-				placeholder="Ex.: 2"
-				value=2
-			  />
-			</div>
+		<h2 style="margin:20px 0px;text-align: center;">Preços de Casas (Palmas-TO)</h2>
+	
+		<div class="row">
+			<div class="col-md-6 mx-auto">
 			
-			<div id="garagens-group" class="form-group">
-			  <label for="garagens">Quantidade de Garagens:</label>
-			  <input
-				type="number"
-				class="form-control"
-				id="garagens"
-				name="garagens"
-				placeholder="Ex.: 2"
-				value=1
-			  />
-			</div>
-			
-			<div id="endereco-group" class="form-group">
-			  <label for="endereco">Endereço <small>(apenas a quadra)</small></label>
-			  <input
-				type="text"
-				class="form-control"
-				id="endereco"
-				name="endereco"
-				placeholder="Ex: Quadra 106 Sul"
-				value="Quadra 106 Sul"
-			  />
-			</div>
+				<p>Quanto custa uma determinada casa na cidade de Palmas-TO? Preencha os campos abaixo e clique
+				em ESTIMAR PREÇO para descobrir.</p>
+				<p><small><i>
+				Este aplicativo utiliza um modelo de Machine Learning treinado com mais de 4.000 casas 
+				listadas à venda no site www.zapimoveis.com.br. Projeto: <a href="https://github.com/ronirigoni/ds_preditor_preco_casas" target="_blank">https://github.com/ronirigoni/ds_preditor_preco_casas</a></i>
+				</small></p>
+			  
+			  <form id="formulario" action="#" method="post">
+				<div id="area-group" class="form-group">
+				  <label for="area">Área Construída (m²):</label>
+				  <input
+					type="number"
+					class="form-control"
+					id="area"
+					name="area"
+					placeholder="Ex.: 200"
+					value=200
+				  />
+				</div>
 
-			<div id="submit-group" class="form-group" style="margin-top:10px">
-				<button id="botao-enviar" class="btn btn-success" onclick="return false;">
-				  PREVER PREÇO
-				</button>
+				<div id="quartos-group" class="form-group">
+				  <label for="quartos">Quantidade de Quartos:</label>
+				  <input
+					type="number"
+					class="form-control"
+					id="quartos"
+					name="quartos"
+					placeholder="Ex.: 3"
+					value=3
+				  />
+				</div>
+
+				<div id="banheiros-group" class="form-group">
+				  <label for="banheiros">Quantidade de Banheiros:</label>
+				  <input
+					type="number"
+					class="form-control"
+					id="banheiros"
+					name="banheiros"
+					placeholder="Ex.: 2"
+					value=2
+				  />
+				</div>
+				
+				<div id="garagens-group" class="form-group">
+				  <label for="garagens">Quantidade de Garagens:</label>
+				  <input
+					type="number"
+					class="form-control"
+					id="garagens"
+					name="garagens"
+					placeholder="Ex.: 2"
+					value=1
+				  />
+				</div>
+				
+				<div id="endereco-group" class="form-group">
+				  <label for="endereco">Endereço <small>(apenas a quadra)</small></label>
+				  <input
+					type="text"
+					class="form-control"
+					id="endereco"
+					name="endereco"
+					placeholder="Ex: Quadra 106 Sul"
+					value="Quadra 106 Sul"
+				  />
+				</div>
+
+				<div id="submit-group" class="form-group" style="margin-top:15px">
+					<button id="botao-enviar" class="btn btn-success" onclick="return false;">
+					  ESTIMAR PREÇO
+					</button>
+				</div>
+			  </form>
 			</div>
-		  </form>
 		</div>
 		
-		<div class="col-sm-6 col-sm-offset-3" style="margin-top:25px;">
-			<h3 id="resultado-retornado"></h3>
+		<div class="row">
+			<div class="col-md-6 mx-auto" style="margin-top:25px;">
+				<h4 id="resultado-retornado"></h4>
+			</div>
 		</div>
 	</div>
   </body>
