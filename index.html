@@ -78,7 +78,7 @@
 	</div>
   </body>
   <script>
-	  //jQuery.support.cors = true;
+	  jQuery.support.cors = true;
 	  $(document).ready(function () {
 	  $("form").submit(function (event) {
 	  
@@ -97,7 +97,7 @@
 		  crossDomain: true,
 		  url: "https://us-central1-fair-melody-362317.cloudfunctions.net/preve_preco",
 		  data: formData,
-		  dataType: "jsonp",
+		  dataType: "json",
 		  encode: true,
 		}).done(function (data) {
 		  console.log(data);
