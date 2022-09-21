@@ -109,6 +109,25 @@
 		
 			e.preventDefault();
 			
+			var area = document.getElementById('area').value;
+			var quartos = document.getElementById('quartos').value;
+			var banheiros = document.getElementById('banheiros').value;
+			var garagens = document.getElementById('garagens').value;
+			var endereco = document.getElementById('endereco').value;
+			
+			if( (area == '') || (quartos == '') || (banheiros == '') || (garagens == '') || (endereco == '') ){
+				alert("PREENCHA TODOS OS CAMPOS");
+				return false;
+			}
+			
+			var dados = {
+				"area": area,
+				"quartos": quartos,
+				"banheiros": banheiros,
+				"garagens": garagens,
+				"endereco": endereco + ", Palmas, TO"
+			};
+			
 			campo_resultado = document.getElementById('resultado-retornado');
 			campo_resultado.innerHTML  = "Aguarde...";
 		
@@ -129,13 +148,7 @@
 			   }
 		    };
 			
-			var dados = {
-				"area": document.getElementById('area').value,
-				"quartos": document.getElementById('quartos').value,
-				"banheiros": document.getElementById('banheiros').value,
-				"garagens": document.getElementById('garagens').value,
-				"endereco": document.getElementById('endereco').value + ", Palmas, TO"
-			};
+			
 
 			xhr.send(JSON.stringify(dados));
 		}
